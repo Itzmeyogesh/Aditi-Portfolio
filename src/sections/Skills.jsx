@@ -4,7 +4,6 @@ import {
   FaDatabase,
   FaHtml5,
   FaCss3Alt,
-  FaJsSquare,
   FaReact,
   FaChevronDown,
   FaTools,
@@ -29,25 +28,25 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen px-6 py-24 bg-gradient-to-tr from-gray-900 via-black to-purple-900 text-white flex flex-col items-center relative"
+      className="w-full py-20 px-4 sm:px-6 lg:px-12 bg-gradient-to-tr from-gray-900 via-black to-purple-900 text-white flex flex-col items-center relative"
     >
-      {/* Heading with Icon */}
+      {/* Section Heading */}
       <motion.div
-        className="flex flex-col items-center gap-2 mb-12"
+        className="flex flex-col items-center gap-2 mb-12 text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <FaTools className="text-4xl text-purple-400 animate-pulse" />
-        <h2 className="text-3xl md:text-5xl font-bold relative inline-block">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold relative inline-block">
           Skills
-          <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-purple-500 rounded-full animate-pulse"></span>
+          <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-purple-500 rounded-full animate-pulse" />
         </h2>
       </motion.div>
 
       {/* Skills Grid */}
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl px-2"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl w-full"
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.1 }}
@@ -55,7 +54,7 @@ const Skills = () => {
         {skills.map((skill, idx) => (
           <motion.div
             key={idx}
-            className="flex flex-col items-center justify-center p-6 bg-white/10 backdrop-blur-md border border-purple-400/10 rounded-2xl shadow-xl hover:shadow-purple-500/30 transition-all duration-300 group"
+            className="flex flex-col items-center justify-center p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl hover:shadow-purple-500/30 transition-all duration-300 group"
             whileHover={{ scale: 1.08 }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +75,7 @@ const Skills = () => {
 
       {/* Scroll Down Arrow */}
       <motion.div
-        className="absolute bottom-8 text-white animate-bounce cursor-pointer"
+        className="mt-12 animate-bounce cursor-pointer"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
