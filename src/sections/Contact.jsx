@@ -1,38 +1,39 @@
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+} from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen px-6 py-20 bg-gradient-to-tr from-[#1f1c2c] via-[#928dab] to-[#1f1c2c] text-white flex flex-col items-center"
+      className="w-full py-20 px-4 sm:px-6 lg:px-12 bg-gradient-to-tr from-[#1f1c2c] via-[#928dab] to-[#1f1c2c] text-white"
     >
       {/* Heading */}
       <motion.div
-        className="flex items-center gap-4 mb-6"
+        className="flex flex-col items-center text-center gap-2 mb-8"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <FaPaperPlane className="text-3xl text-purple-300" />
-        <h2 className="text-3xl md:text-5xl font-bold">Get in Touch</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          Get in Touch
+        </h2>
+        <p className="text-base sm:text-lg text-gray-200 max-w-2xl mt-2">
+          Let’s build something amazing together. Contact me for opportunities
+          or collaborations!
+        </p>
       </motion.div>
 
-      {/* Tagline */}
-      <motion.p
-        className="text-lg text-gray-200 mb-10 text-center max-w-2xl"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-      >
-        Let’s build something amazing together. Contact me for opportunities or collaborations!
-      </motion.p>
-
-      {/* Contact Info + Form */}
-      <div className="flex flex-col lg:flex-row justify-center gap-10 w-full max-w-6xl">
+      {/* Contact Info & Form */}
+      <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
         {/* Contact Info */}
         <motion.div
-          className="w-full lg:w-1/2 space-y-6 bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-xl"
+          className="w-full lg:w-1/2 space-y-6 bg-white/10 backdrop-blur-md border border-white/10 p-6 sm:p-8 rounded-2xl shadow-xl"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -56,7 +57,7 @@ const Contact = () => {
         {/* Contact Form */}
         <motion.form
           onSubmit={(e) => e.preventDefault()}
-          className="w-full lg:w-1/2 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl space-y-4"
+          className="w-full lg:w-1/2 bg-white/10 backdrop-blur-md border border-white/10 p-6 sm:p-8 rounded-2xl shadow-xl space-y-4"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
